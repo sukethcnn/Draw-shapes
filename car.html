@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <canvas id="myCanvas" width="1340" height="500" style="border:1px solid #000000;">
+</canvas> 
+<script type="text/javascript">
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+var xmid=1340/2;
+var ymid=500/2;
+ctx.moveTo(xmid,ymid);
+var xtopl=xmid-100;
+ctx.lineTo(xtopl,ymid);
+var xslantl=xtopl-70;
+var yslantl=ymid+70;
+ctx.lineTo(xslantl,yslantl);
+var yslantr=ymid+70;
+var xslantr=xmid+100+70;
+ctx.lineTo(xslantr,yslantr);
+ctx.moveTo(xmid,ymid);
+var xtopr=xmid+100;
+ctx.lineTo(xtopr,ymid);
+ctx.lineTo(xslantr,yslantr);
+ctx.stroke();
+</script>
+</body>
+</html>
