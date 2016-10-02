@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000;">
+</canvas> 
+<script type="text/javascript">
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+var x=500;
+var y=100;
+ctx.arc(x,y,40,0,2*Math.PI);
+y=y+40;
+ctx.moveTo(x,y);
+y=y+100;
+ctx.lineTo(x,y);
+x=x-60;
+y=y+70;
+ctx.lineTo(x,y);
+x=x+60;
+y=y-70;
+ctx.moveTo(x,y);
+x=x+60;
+y=y+70;
+ctx.lineTo(x,y);
+xmid=x-60;
+ymid=y-70-50-20;
+ctx.moveTo(xmid,ymid);
+x=xmid-40;
+y=ymid+50
+ctx.lineTo(x,y);
+ctx.moveTo(xmid,ymid);
+x=xmid+40;
+y=ymid+50
+ctx.lineTo(x,y);
+ctx.stroke();
+</script>
+</body>
+</html>
